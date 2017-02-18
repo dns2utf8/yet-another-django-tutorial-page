@@ -1,19 +1,11 @@
-{% load staticfiles %}
-<html>
-  <head>
-    <title>Stefan's blog</title>
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-  </head>
-  <body>
-    <header>
-      <h1>Stefan's blog</h1>
-    </header>
-    {% for post in posts %}
-      <section>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-      </section>
-    {% endfor %}
-  </body>
-</html>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  {% for post in posts %}
+    <section>
+      <p>Veröffentlicht: {{ post.published_date }}</p>
+      <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>
+    </section>
+  {% endfor %}
+{% endblock %}

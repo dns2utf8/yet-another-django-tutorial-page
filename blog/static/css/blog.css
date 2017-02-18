@@ -1,2 +1,19 @@
-body { background: #333; }
+body { background: #333; padding: 13px; }
+body, #content { display: flex; flex-direction: column; }
+#content, section { flex-grow: 1; }
+
 header, section { margin: 6px; border: 1px solid #111; border-radius: 6px; padding: 13px; background: #fff; }
+
+header { background: #fca205; color: #fff; }
+header h1 a { color: #fff; text-decoration: none; }
+
+footer, footer a { text-align: center; color: #aaa; }
+
+section > h1, h1 > a { color: #FCA205; }
+a { color: #33f; }
+
+@media (min-width: 750px) {
+  body { padding: 23px; }
+  #content { flex-direction: row; flex-wrap: wrap; }
+  section { min-width: 300px; }
+}

@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <title>Stefan's blog</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">Stefan's blog</a></h1>
+    </header>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <footer><a href="http://estada.ch/">Estada.ch</a></footer>
+  </body>
+</html>
