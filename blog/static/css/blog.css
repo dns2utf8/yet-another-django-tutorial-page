@@ -1,4 +1,4 @@
-body { background: #333; padding: 13px; }
+body { background: #333; padding: 6px; }
 body, #content { display: flex; flex-direction: column; }
 #content, section { flex-grow: 1; }
 
@@ -16,4 +16,9 @@ a { color: #33f; }
   body { padding: 23px; }
   #content { flex-direction: row; flex-wrap: wrap; }
   section { min-width: 300px; }
+}
+
+@media (min-width: 1250px) {
+  body { background: green; }
+  header, #content { width: 1200px; }
 }
