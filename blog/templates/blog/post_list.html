@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Stefan's blog</title>
+    <style>
+      body { background: #333; }
+      header, section { margin: 6px; border: 1px solid #111; border-radius: 6px; padding: 13px; background: #fff; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Stefan's blog</h1>
+    </header>
+    {% for post in posts %}
+      <section>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+      </section>
+    {% endfor %}
+  </body>
+</html>
